@@ -39,7 +39,7 @@ Web platform: https://bal.asia.edu.tw/CircadianGeneAtlas/
 - CircaDB human dataset (rhythmic genes inferred from GTEx by CYCLOPS; Ruben et al., Sci Transl Med 2018), accessed 5 July 2026; the query result is included as `data/CircaDB_HA_query.csv`
 - Time-series transcriptomes: GEO GSE39445 (blood) and GSE108539 (skeletal muscle)
 - GENCODE v36 annotation (Ensembl-to-symbol mapping)
-- GENCODE v48 annotation and MyGene.info (gene annotation integration for the Stage 1 gene table; Ensembl identifiers retrieved 28 July 2025)
+- GENCODE v48 annotation and MyGene.info (gene annotation integration for the Stage 1 gene table; Ensembl identifiers retrieved 15 September 2025)
 
 In the original analysis, TCGA data were read from a local SQL Server database. Scripts that query the database read the connection settings from environment variables (see `.env.example`); the processed feature matrices in `data/` allow the model, candidates and figures to be reproduced without database access.
 
