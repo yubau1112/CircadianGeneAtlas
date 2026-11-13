@@ -3,7 +3,7 @@
 Code and processed data for the manuscript
 **“A computational framework for literature-guided discovery of circadian-associated genes using pan-cancer multi-omics and machine learning”** (APBC 2026, submission 98).
 
-Web platform: http://bal.asia.edu.tw/CircadianGeneAtlas/
+Web platform: https://bal.asia.edu.tw/CircadianGeneAtlas/
 
 ## Overview
 
@@ -33,12 +33,13 @@ Web platform: http://bal.asia.edu.tw/CircadianGeneAtlas/
 
 ## Data sources (not redistributed)
 
-- TCGA gene expression and DNA methylation: NCI Genomic Data Commons, Data Release 38.0 (primary tumor and adjacent normal samples, 24 cancer types)
+- TCGA gene expression, DNA methylation, copy number, somatic mutation, microRNA expression and clinical data: NCI Genomic Data Commons, Data Release 38.0 (primary tumor and adjacent normal samples, 24 cancer types); gene-level mutation frequencies in Table 3 from the GDC somatic mutation snapshot of 24 May 2024 (all programs)
 - GTEx v8 expression (used only for the excluded leakage-control branch and Figure S7)
-- PubMed records and PubTator3 annotations (retrieved May 2025)
+- PubMed records (searched 2 August 2025) and PubTator3 annotations (retrieved 4 August 2025)
 - CircaDB human dataset (rhythmic genes inferred from GTEx by CYCLOPS; Ruben et al., Sci Transl Med 2018), accessed 5 July 2026; the query result is included as `data/CircaDB_HA_query.csv`
 - Time-series transcriptomes: GEO GSE39445 (blood) and GSE108539 (skeletal muscle)
 - GENCODE v36 annotation (Ensembl-to-symbol mapping)
+- GENCODE v48 annotation and MyGene.info (gene annotation integration for the Stage 1 gene table; Ensembl identifiers retrieved 28 July 2025)
 
 In the original analysis, TCGA data were read from a local SQL Server database. Scripts that query the database read the connection settings from environment variables (see `.env.example`); the processed feature matrices in `data/` allow the model, candidates and figures to be reproduced without database access.
 
